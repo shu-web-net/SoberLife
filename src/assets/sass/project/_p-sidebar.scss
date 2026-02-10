@@ -1,0 +1,141 @@
+@use "../global" as *;
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+
+  @media (min-width: $lg) {
+    width: 33.333%;
+  }
+}
+
+.widget {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  h5 {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 1.25rem;
+      height: 1.25rem;
+      margin-right: 0.5rem;
+      color: var(--color-primary);
+    }
+  }
+}
+
+// Counter Widget
+.counter-widget {
+  border: 1px solid var(--color-primary-light);
+  text-align: center;
+
+  .counter-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+  }
+
+  .counter-value {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--color-primary-dark);
+    margin-bottom: 0.5rem;
+  }
+
+  .counter-unit {
+    font-size: 0.875rem;
+    color: var(--color-text-light);
+    margin-bottom: 1.5rem;
+  }
+
+  .counter-settings {
+    display: flex;
+    gap: 0.5rem;
+
+    input {
+      flex: 1;
+      font-size: 0.75rem;
+      border: 1px solid var(--color-border);
+      border-radius: 0.25rem;
+      padding: 0.5rem;
+      outline: none;
+
+      &:focus {
+        border-color: var(--color-primary);
+      }
+    }
+  }
+}
+
+// Category List
+.category-list {
+  li {
+    &:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    a {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: var(--color-text-light);
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(--color-primary);
+
+        .count {
+          background-color: var(--color-primary-light);
+          color: var(--color-primary);
+        }
+      }
+
+      .count {
+        font-size: 0.75rem;
+        background-color: var(--color-bg);
+        color: var(--color-text-muted);
+        padding: 0.25rem 0.5rem;
+        border-radius: 0.25rem;
+        transition: all 0.3s;
+      }
+    }
+  }
+}
+
+// Newsletter Widget
+.newsletter-widget {
+  background-color: #0f172a;
+  color: #fff;
+
+  p {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+  }
+
+  input {
+    width: 100%;
+    background-color: #1e293b;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    color: #fff;
+    font-size: 0.875rem;
+    margin-bottom: 0.75rem;
+    outline: none;
+
+    &:focus {
+      box-shadow: 0 0 0 2px var(--color-primary);
+    }
+  }
+}

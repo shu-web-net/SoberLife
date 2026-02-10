@@ -1,0 +1,30 @@
+:root {
+  // Colors
+  --color-primary: #10b981;       // emerald-500
+  --color-primary-dark: #059669;  // emerald-600
+  --color-primary-light: #ecfdf5; // emerald-50
+  --color-text: #1e293b;          // slate-800
+  --color-text-light: #64748b;    // slate-500
+  --color-text-muted: #94a3b8;    // slate-400
+  --color-bg: #f8fafc;            // slate-50
+  --color-border: #e2e8f0;        // slate-200
+
+  // Typography
+  --font-main: 'Noto Sans JP', sans-serif;
+}
+
+// Sassの変数としても定義しておくことで、コンパイル時の補完や計算に利用可能にします
+$color-primary: var(--color-primary);
+$color-primary-dark: var(--color-primary-dark);
+$color-primary-light: var(--color-primary-light);
+$color-text: var(--color-text);
+$color-text-light: var(--color-text-light);
+$color-text-muted: var(--color-text-muted);
+$color-bg: var(--color-bg);
+$color-border: var(--color-border);
+
+$font-main: var(--font-main);
+
+// Breakpoints (Media QueriesにはCSS変数は使えないため、Sass変数のまま保持します)
+$md: 768px;
+$lg: 1024px;

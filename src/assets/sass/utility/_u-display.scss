@@ -1,0 +1,13 @@
+@use "../global/" as *;
+
+.u-sp-hidden {
+ @media (min-width: $md) {
+    display: none;
+  }
+}
+
+.u-pc-hidden {
+ @media (min-width: $lg) {
+    display: none;
+  }
+}

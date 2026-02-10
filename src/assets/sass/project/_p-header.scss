@@ -1,0 +1,55 @@
+@use "../global" as *;
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+
+  .nav-menu {
+    display: none;
+
+    @media (min-width: $md) {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: $lg) {
+      gap: 2rem;
+    }
+
+    a {
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.3s;
+
+      &:hover {
+        color: var(--color-primary);
+      }
+
+      &.active {
+        color: var(--color-primary);
+      }
+    }
+  }
+
+  .mobile-menu-btn {
+    @media (min-width: $md) {
+      display: none;
+    }
+    padding: 0.5rem;
+  }
+}
