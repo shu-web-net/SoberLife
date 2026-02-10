@@ -12,35 +12,33 @@
 <body <?php body_class(); ?>>
   <?php wp_body_open(); ?>
 
+
   <!-- Header -->
-  <header class="site-header sticky top-0 z-50 glass-effect shadow-sm">
-    <div class="container flex justify-between items-center py-4">
-      <h1 class="logo">
-        <a href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-      </h1>
 
-      <nav class="nav-menu hidden md:flex">
-        <?php
-        // WordPressのカスタムメニューを表示する場合
-        // wp_nav_menu(array(
-        //     'theme_location' => 'main-menu',
-        //     'container'      => false,
-        //     'menu_class'     => 'nav-list', // Sassで定義したクラスに合わせて調整
-        // ));
-        ?>
-        <!-- 以下、プロトタイプの静的構造 -->
-        <a href="<?php echo esc_url(home_url('/')); ?>">ホーム</a>
-        <a href="#">断酒のメリット</a>
-        <a href="#">実践テクニック</a>
-        <a href="#">体験談</a>
-        <a href="#" class="text-primary">禁酒用語集</a>
-        <a href="#">お問い合わせ</a>
-      </nav>
-
-      <button class="mobile-menu-btn md:hidden" aria-label="メニューを開く">
-        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-        </svg>
-      </button>
+  <header class="header">
+    <div class="l-container">
+      <div class="header__inner">
+        <h1 class="header__logo">
+          <a href="#">SoberLife</a>
+        </h1>
+        <nav class="header__nav">
+          <a href="#" class="header__nav-link header__nav-link--active">ホーム</a>
+          <a href="#" class="header__nav-link">断酒のメリット</a>
+          <a href="#" class="header__nav-link">実践テクニック</a>
+          <a href="#" class="header__nav-link">体験談</a>
+          <a href="#" class="header__nav-link header__nav-link--accent">禁酒用語集</a>
+          <a href="#" class="header__nav-link">お問い合わせ</a>
+        </nav>
+        <button class="header__mobile-btn" aria-label="メニューを開く" aria-expanded="false">
+          <!-- ハンバーガーアイコン -->
+          <svg class="header__icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+          <!-- 閉じるアイコン -->
+          <svg class="header__icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
