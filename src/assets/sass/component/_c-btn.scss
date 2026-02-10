@@ -1,8 +1,6 @@
 @use "../global/" as global;
-
 // ボタン
- /* Buttons */
-        .btn {
+.btn {
             display: inline-block;
             padding: 0.75rem 2rem;
             border-radius: 0.5rem;
@@ -11,39 +9,49 @@
             cursor: pointer;
             text-decoration: none;
             border: none;
+            font-family: inherit;
+            text-align: center;
         }
 
-        .btn-primary {
+        .btn--primary {
             background-color: var(--color-primary);
             color: #fff;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
 
-        .btn-primary:hover {
+        .btn--primary:hover {
             background-color: var(--color-primary-dark);
             transform: translateY(-1px);
         }
 
-        .btn-secondary {
+        .btn--secondary {
             background-color: #fff;
             color: var(--color-primary);
             border: 1px solid var(--color-border);
         }
 
-        .btn-secondary:hover {
+        .btn--secondary:hover {
             background-color: var(--color-primary-light);
         }
 
-        .btn-outline {
+        .btn--outline {
             border: 2px solid var(--color-border);
             color: var(--color-text-light);
             border-radius: 9999px;
             background: transparent;
         }
 
-        .btn-outline:hover {
+        .btn--outline:hover {
             background-color: var(--color-bg);
             color: var(--color-text);
         }
 
+        .btn--small {
+            padding: 0.5rem 1rem;
+            font-size: 0.75rem;
+        }
 
+        .btn--full {
+            display: block;
+            width: 100%;
+        }

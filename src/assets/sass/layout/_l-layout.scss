@@ -1,59 +1,44 @@
 @use "../global" as *;
+/* --- _layout.scss --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: var(--font-main);
   background-color: var(--color-bg);
   color: var(--color-text);
   line-height: 1.6;
-  margin: 0;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.container {
+.l-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 1.25rem;
 }
 
-.main-layout {
+.l-main {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   padding: 3rem 0;
+}
 
-  @media (min-width: $lg) {
+@media (min-width: 1024px) {
+  .l-main {
     flex-direction: row;
   }
-}
-
-.content-area {
-  @media (min-width: $lg) {
-    width: 66.666%;
+  .l-main__content {
+    width: 66.6%;
+  }
+  .l-main__sidebar {
+    width: 33.3%;
   }
 }
 
-.section-title {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-
-  &::before {
-    content: "";
-    width: 2rem;
-    height: 0.25rem;
-    background-color: var(--color-primary);
-    margin-right: 0.75rem;
-  }
+.l-actions {
+  text-align: center;
+  margin-top: 3rem;
 }
